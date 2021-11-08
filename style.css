@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 2.5fr;
+    grid-template-rows:3fr 6fr 4fr 2fr ;
+    grid-template-areas: 
+    "header header header header"
+    "box1 box2 box3 sidebar"
+    "main main main sidebar"
+    "footer footer footer footer";
+    height: 100vh;
+    grid-gap: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+.grid div{
+    background-color: aqua;
+    padding: 1rem;
+    text-align: center;    
+    border-radius: 0.5rem;
+    opacity: 0.7;
+}
+
+.grid div:hover{
+    opacity: 1;
+    transition: 0.5s;
+    
+}
+
+.header{
+    grid-area: header;
+    background-image: url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.small-box1{
+    grid-area: box1;
+    background-image: url(img/image2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.small-box2{
+    grid-area: box2;
+    background-image: url(img/image3.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.small-box3{
+    grid-area: box3;
+    background-image: url(img/image4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-image: url(img/image5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.main-content{
+    grid-area: main;
+    background-image: url(img/image6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer{
+    grid-area: footer;
+    background-image: url(img/image2.jpg);
+    background-size: cover;
+    background-position: center;
+}
